@@ -7,9 +7,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "user", schema = "gallerist")
@@ -17,15 +20,16 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User extends BaseEntity implements UserDetailsService {
+public class User extends BaseEntity implements UserDetails {
     @Column(name = "username")
     private String username;
 
     @Column(name = "password")
     private String password;
 
+
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
     }
 }

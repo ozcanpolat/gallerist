@@ -17,7 +17,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+public class Customer extends BaseEntity{
     @Column(name = "first_name")
     private String firstName;
 

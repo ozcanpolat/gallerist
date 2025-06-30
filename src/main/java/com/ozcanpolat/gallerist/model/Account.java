@@ -25,7 +25,7 @@ public class Account  extends BaseEntity{
     @Column(name = "amount")
     private BigDecimal amount;
 
-    @Column(name = "curreny_type")
+    @Column(name = "currency_type")
     @Enumerated(EnumType.STRING)
     private CurrencyType currencyType;
 }
