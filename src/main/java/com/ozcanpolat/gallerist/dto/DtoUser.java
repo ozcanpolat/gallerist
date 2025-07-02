@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class DtoUser extends DtoBase{
 
-    private String username;
-
-    private String password;
+	private String username;
+	
+	private String password;
 }

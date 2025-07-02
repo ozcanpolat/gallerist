@@ -1,5 +1,6 @@
 package com.ozcanpolat.gallerist.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,9 +10,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthResponse {
+public class DtoGalleristIU{
 
-	private String accessToken;
+	@NotNull
+	private String firstName;
 	
-	private String refreshToken;
+	@NotNull
+	private String lastName;
+	
+	@NotNull
+	private Long addressId;
 }

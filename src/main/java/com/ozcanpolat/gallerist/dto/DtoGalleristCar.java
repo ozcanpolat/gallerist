@@ -1,15 +1,13 @@
 package com.ozcanpolat.gallerist.dto;
 
-import java.util.Date;
-
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class DtoBase {
+public class DtoGalleristCar extends DtoBase{
 
-	private Long id;
+	private DtoGallerist gallerist;
 	
-	private Date createTime;
+	private DtoCar car;
 }

@@ -6,11 +6,17 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AuthRequest {
+public class DtoAddressIU {
 
 	@NotEmpty
-	private String username;
+	private String city;
 	
 	@NotEmpty
-	private String password;
+	private String district;
+	
+	@NotEmpty
+	private String neighborhood;
+	
+	@NotEmpty
+	private String street;
 }
