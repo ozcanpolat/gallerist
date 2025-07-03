@@ -28,7 +28,6 @@ import com.ozcanpolat.gallerist.repository.GalleristRepository;
 import com.ozcanpolat.gallerist.repository.SaledCarRepository;
 import com.ozcanpolat.gallerist.service.ICurrencyRatesService;
 import com.ozcanpolat.gallerist.service.ISaledCarService;
-import com.ozcanpolat.gallerist.utils.DateUtils;
 
 @Service
 public class SaledCarServiceImpl implements ISaledCarService {
@@ -52,7 +51,7 @@ public class SaledCarServiceImpl implements ISaledCarService {
 	public BigDecimal convertCustomerAmountToUSD(Customer customer) {
 
 		CurrencyRatesResponse currencyRatesResponse = currencyRatesService
-				.getCurrencyRates("11-10-2024","11-10-2024");
+				.getCurrencyRates("3-7-2025","3-7-2025");
 		BigDecimal usd = new BigDecimal(currencyRatesResponse.getItems().get(0).getUsd());
 
 		BigDecimal customerUSDAmount = customer.getAccount().getAmount().divide(usd, 2, RoundingMode.HALF_UP);
